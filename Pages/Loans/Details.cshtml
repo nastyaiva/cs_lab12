@@ -1,0 +1,37 @@
+﻿@page
+@model laboratory_12.Pages.Loans.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Loan</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Loan.MemberId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Loan.MemberId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Loan.BookId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Loan.BookId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Loan.LoanDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Loan.LoanDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Loan.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
